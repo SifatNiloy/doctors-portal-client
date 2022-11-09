@@ -14,7 +14,7 @@ const AppointmentBanner = ({date, setDate}) => {
                 selected={date}
                 onSelect={setDate}
                 />
-                <p>You have Selected: </p>
+                
                 </div>
             </div>
             
