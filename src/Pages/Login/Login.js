@@ -22,8 +22,8 @@ const Login = () => {
     if(error||gError){
         signInError=<p className='text-red-500'><small>{error?.message|| gError?.message}</small></p>
     }
-    if (gUser) {
-        console.log(user);
+    if (gUser ) {
+        console.log(gUser);
     }
     const onSubmit = data => {
         console.log(data)
