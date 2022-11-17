@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import Loading from '../Shared/Loading';
 
 const AddDoctor = () => {
-    const { register, formState: { errors }, handleSubmit } = useForm();
+    const { register, formState: { errors }, handleSubmit , reset} = useForm();
     const { data: services, isLoading } = useQuery('services', () => fetch(`http://localhost:5000/service`).then(res => res.json()))
     const imgStorageKey='b45577590052caef69c902118f449152'
     const onSubmit = async data => {
@@ -43,6 +43,10 @@ const AddDoctor = () => {
                     console.log('doctor' ,inserted);
                     if(inserted.insertedId){
                         toast.success('Doctor added successfully')
+                        reset();
+                    }
+                    else{
+                        toast.error('Failed to add the doctor')
                     }
                 })
             }
