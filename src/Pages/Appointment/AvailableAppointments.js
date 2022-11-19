@@ -6,6 +6,7 @@ import BookingModal from './BookingModal';
 import Service from './Service';
 
 const AvailableAppointments = ({ date }) => {
+   
     const [treatment, setTreatment] = useState(null);
 
     const formattedDate = format(date, 'PP');
