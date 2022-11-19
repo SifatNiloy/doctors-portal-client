@@ -68,7 +68,7 @@ const AddDoctor = () => {
                     </label>
                     <input
                         type="text"
-                        placeholder="Your Name"
+                        placeholder="Name"
                         className="input input-bordered w-full max-w-xs"
                         {...register("name", {
                             required: {
@@ -93,7 +93,7 @@ const AddDoctor = () => {
                     </label>
                     <input
                         type="email"
-                        placeholder="Your email"
+                        placeholder="email"
                         className="input input-bordered w-full max-w-xs"
                         {...register("email", {
                             required: {
