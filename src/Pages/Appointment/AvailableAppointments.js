@@ -6,14 +6,13 @@ import BookingModal from './BookingModal';
 import Service from './Service';
 
 const AvailableAppointments = ({ date }) => {
-   
     const [treatment, setTreatment] = useState(null);
 
     const formattedDate = format(date, 'PP');
     const { data: services, isLoading, refetch } = useQuery(['available', formattedDate], () => fetch(`http://localhost:5000/available?date=${formattedDate}`)
         .then(res => res.json()))
 
-    if(isLoading){
+    if (isLoading) {
         return <Loading></Loading>
     }
 
@@ -33,7 +32,7 @@ const AvailableAppointments = ({ date }) => {
                 date={date}
                 treatment={treatment}
                 setTreatment={setTreatment}
-                refetch = {refetch}
+                refetch={refetch}
             ></BookingModal>}
         </div>
     );
